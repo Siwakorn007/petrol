@@ -1,0 +1,71 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 320px;
+    background-color: black;
+    border: 5px solid white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 0 white;
+
+    &_logo {
+        display: grid;
+        place-items: center;
+        height: 120px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        font-family: 'Mochiy Pop P one', sans-serif;
+        color: white;
+    }
+
+    &_menu {
+        position: relative;
+
+        &_item {
+            display: flex;
+            align-items: center;
+            place-content: flex-start;
+            padding: 1rem 3rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: white;
+            overflow: hidden; /* Hide overflow text */
+            white-space: nowrap; /* Prevent text from wrapping */
+            text-overflow: ellipsis; /* Add ellipsis (...) when text overflows */
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #ffffff;
+                color: black;
+                box-shadow: 10px 0 10px 0 white;
+            }
+
+            &_icon {
+                margin-left: 1rem;
+                i {
+                    font-size: 1.75rem;
+                }
+            }
+
+            &_text {
+                margin-left: 1rem;
+                display: inline-block;
+                transition: transform 0.3s ease;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+
+    &_menu_indicator {
+        position: absolute;
+        left: 0;
+        width: 5px;
+        
+        transition: height 0.3s ease, transform 0.3s ease;
+        border-radius: 0 10px 10px 0;
+    }
+}

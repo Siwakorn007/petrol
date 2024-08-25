@@ -640,13 +640,13 @@ const ParticlesComponent = (props) => {
     };
   }, []);
 
-  // useCallback is not mandatory, but it's recommended since this callback can be memoized if static
+ 
   const particlesInit = useCallback((engine) => {
     loadSlim(engine);
-    // loadFull(engine); // for this sample the slim version is enough, choose whatever you prefer, slim is smaller in size but doesn't have all the plugins and the mouse trail feature
+   
   }, []);
 
-  // setting an id can be useful for identifying the right particles component, this is useful for multiple instances or reusable components
+  
   return <Particles id={props.id} init={particlesInit} options={options} />;
 };
 
