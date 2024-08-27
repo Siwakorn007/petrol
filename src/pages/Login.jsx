@@ -1,4 +1,3 @@
-// src/pages/Login.jsx
 import React, { useState } from 'react';
 import './Login.css';
 import axios from 'axios';
@@ -7,15 +6,10 @@ import { MdAccountCircle } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
 import Particles from '../components/Particles';
 
-
-// parunyoo julachai facebook
-
-
 function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
-// parunyoo julachai facebook
 
     const handleLogin = async (event) => {
         event.preventDefault();
@@ -27,6 +21,7 @@ function Login() {
 
             localStorage.setItem('token', response.data.token);
             localStorage.setItem('role', response.data.role);
+            localStorage.setItem('username', response.data.username);  // เก็บ username ลงใน localStorage
 
             if (response.data.role === 'manager') {
                 navigate('/dashboard');
@@ -38,7 +33,7 @@ function Login() {
             alert('Login failed, please check your credentials');
         }
     };
-// parunyoo julachai facebook
+
     return (
         <div className="login-page">
             <Particles id="tsparticles" />
@@ -54,7 +49,7 @@ function Login() {
                         <RiLockPasswordFill className="Icon" />
                     </div>
                     <div className="remember-forgot">
-                        <label><input type="checkbox"/>Remember me</label>
+                        <label><input type="checkbox" />Remember me</label>
                         <a href="#">Forgot password</a>
                     </div>
                     <button type="submit">Login</button>
@@ -63,5 +58,5 @@ function Login() {
         </div>
     );
 }
-// parunyoo julachai facebook
+
 export default Login;

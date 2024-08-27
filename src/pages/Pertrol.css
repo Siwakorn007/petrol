@@ -1,0 +1,87 @@
+.container_pertrol{
+ 
+    color:wheet
+}
+
+.container_pertrol {
+    max-width: 800px;
+    color: white;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #000000;
+    box-shadow: 0 0 15px 0 #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    
+    
+}
+
+.oil-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.oil-table th, .oil-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.oil-table th {
+    background-color: #000000;
+    color: white;
+}
+
+.oil-table td {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+.edit-btn, .delete-btn {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: #ffc107;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.add-oil-form, .update-price-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.add-oil-form input, .update-price-form input, .update-price-form select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.add-oil-form button, .update-price-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
+.add-oil-form button:hover, .update-price-form button:hover {
+    background-color: rgb(13, 202, 54);
+    box-shadow: 0 0 15px 0 rgb(13, 202, 54);
+    color: #000000;
+}

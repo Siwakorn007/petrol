@@ -5,8 +5,8 @@
     height: 100vh;
     width: 320px;
     background-color: black;
-    border: 5px solid white;
-    border-radius: 10px;
+    border-right: 5px solid white;
+    
     box-shadow: 0 0 15px 0 white;
 
     &_logo {
@@ -67,5 +67,37 @@
         
         transition: height 0.3s ease, transform 0.3s ease;
         border-radius: 0 10px 10px 0;
+    }
+}
+
+.username{
+    position: relative;
+    font-size: 2vw;
+    color: transparent;
+    -webkit-text-stroke: 0.3px rgb(255, 255, 255);
+    text-transform: uppercase;
+    white-space: nowrap; /* ไม่ให้ข้อความขึ้นบรรทัดใหม่ */
+    overflow: hidden; /* ซ่อนส่วนที่เกินออกมา */
+    text-overflow: ellipsis; /* ถ้าข้อความยาวเกินจะมี ... */
+}
+
+.username::before {
+    content: attr(data-username); /* ใช้ค่า username จาก data-attribute */
+    position: absolute;
+    width: 0%; /* เริ่มต้นที่ 0% */
+    height: 100%;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    border-right: 8px solid rgb(255, 255, 255);
+    animation: revealText 1s ease-in-out forwards; /* เพิ่ม animation */
+    filter: drop-shadow(0 0 25px darkmagenta);
+}
+
+@keyframes revealText {
+    0% {
+        width: 0%; /* เริ่มจาก 0% */
+    }
+    100% {
+        width: 100%; /* จบที่ 100% */
     }
 }
